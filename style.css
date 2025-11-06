@@ -1,65 +1,79 @@
-/* style.css */
 :root {
-  --bg-color: #0d0d0d;
-  --text-color: #fff;
-  --accent: #00ffd0;
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent: #007ACC;
   --font: 'Inter', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box‐sizing: border-box;
 }
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
+  line-height: 1.6;
+  padding: 2rem;
 }
 
 main {
-  max-width: 400px;
-  padding: 1rem;
-}
-
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 2px solid var(--accent);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
 }
 
 .subtitle {
-  color: #aaa;
+  font-size: 1rem;
+  color: #555555;
   margin-bottom: 1.5rem;
 }
 
-nav a {
-  display: block;
-  margin: 0.3rem 0;
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.bio p {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.works ul {
+  list-style: none;
+}
+
+.works li {
+  margin-bottom: 0.5rem;
+}
+
+.works a {
   color: var(--accent);
   text-decoration: none;
   transition: opacity 0.2s;
 }
 
-nav a:hover {
+.works a:hover {
   opacity: 0.7;
 }
 
 footer {
-  margin-top: 2rem;
+  text-align: center;
   font-size: 0.8rem;
-  color: #666;
+  color: #888888;
+  margin-top: 3rem;
 }
