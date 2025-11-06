@@ -28,9 +28,12 @@ body {
 }
 
 main {
-  max-width: 850px;  /* más ancho */
-  margin: 0;         /* sin centrado horizontal */
+  max-width: 1200px;     /* ocupa más ancho en pantallas grandes */
+  width: 100%;            /* usa todo el ancho disponible */
+  margin: 0;              /* sin centrado horizontal */
+  padding-right: 2rem;    /* deja algo de respiración a la derecha */
 }
+
 
     h1 {
       font-size: 2rem;
@@ -74,6 +77,13 @@ main {
   font-size: 0.8rem;
   color: #888888;
   margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  main {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
 }
 
   </style>
