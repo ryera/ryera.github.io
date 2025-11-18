@@ -80,14 +80,14 @@ footer {
 
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 100%;           /* se adapta al ancho del aside */
+  height: auto;          /* mantiene proporción */
   display: block;
-  margin: 0 auto 1.2rem auto;
-  border: 2px solid #eee;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;    /* opcional: bordes redondeados */
+  object-fit: cover;     /* se asegura de que se vea bien si recortas */
 }
+
 
 .scholar-icon img {
   width: 32px;
