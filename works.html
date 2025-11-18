@@ -4,6 +4,58 @@
   <meta charset="UTF-8">
   <title>Works - Raciel Yera</title>
   <link rel="stylesheet" href="style.css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+    :root {
+      --sidebar-width: 220px;
+      --accent: #007ACC;
+      --text: #111;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: var(--sidebar-width);
+      height: 100vh;
+      position: fixed;
+      background: #fff;
+      border-right: 1px solid #eee;
+      padding: 2rem 1.5rem;
+    }
+
+    .sidebar h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .menu a {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .menu a:hover {
+      color: var(--accent);
+      padding-left: 4px;
+    }
+
+    /* Main content */
+    .content {
+      margin-left: var(--sidebar-width);
+      padding: 2rem 3rem;
+    }
+
+  </style>
+
 </head>
 <body>
 
