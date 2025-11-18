@@ -3,115 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="AetDYSIXMQ7W5zjGZK0in7tDnqtkYjkEWvFeGUu7HIE" />
   <title>Raciel Yera Toledo</title>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
     :root {
-      --bg-color: #ffffff;
-      --text-color: #111111;
+      --bg: #ffffff;
+      --text: #111;
       --accent: #007ACC;
-      --font: 'Inter', sans-serif;
+      --sidebar-width: 220px;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font);
-  line-height: 1.6;
-  padding: 2rem 3rem;   /* un poco más de espacio lateral */
-  font-size: 15px;      /* letra ligeramente más pequeña */
-  text-align: left;     /* todo el contenido alineado a la izquierda */
-}
 
-main {
-  max-width: 1200px;     /* ocupa más ancho en pantallas grandes */
-  width: 100%;            /* usa todo el ancho disponible */
-  margin: 0;              /* sin centrado horizontal */
-  padding-right: 2rem;    /* deja algo de respiración a la derecha */
-}
-
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      line-height: 1.6;
     }
-    .subtitle {
-      font-size: 1rem;
-      color: #555555;
+
+    /* ---- SIDEBAR ---- */
+    .sidebar {
+      width: var(--sidebar-width);
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid #e5e5e5;
+    }
+
+    .sidebar h1 {
+      font-size: 1.5rem;
       margin-bottom: 1.5rem;
+      font-weight: 600;
     }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      font-size: 1.4rem;
+
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
       margin-bottom: 0.8rem;
-      color: var(--accent);
-    }
-    .bio p {
       font-size: 1rem;
-      color: #333333;
+      transition: 0.2s;
     }
+
+    .menu a:hover {
+      color: var(--accent);
+      padding-left: 4px;
+    }
+
+    /* ---- MAIN CONTENT ---- */
+    .content {
+      margin-left: var(--sidebar-width);
+      padding: 2rem 3rem;
+      max-width: 900px;
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
+    }
+
     .works ul {
       list-style: none;
       padding-left: 0;
     }
+
     .works li {
       margin-bottom: 0.6rem;
     }
+
     .works a {
       color: var(--accent);
       text-decoration: none;
-      transition: opacity 0.2s;
     }
+
     .works a:hover {
       opacity: 0.7;
     }
-    footer {
-  text-align: left;  /* alinea a la izquierda */
-  font-size: 0.8rem;
-  color: #888888;
-  margin-top: 3rem;
-}
 
-@media (max-width: 900px) {
-  main {
-    max-width: 100%;
-    padding: 0 1.5rem;
-  }
-}
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 900px) {
+      :root {
+        --sidebar-width: 160px;
+      }
+      .sidebar h1 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .content {
+        margin-left: 0;
+        padding-top: 1.5rem;
+      }
+    }
 
   </style>
 </head>
 <body>
-  <main>
-    <h1>Raciel Yera Toledo</h1>
-    <p class="subtitle">Marie-Skłodowska Curie Postdoctoral Researcher · Universidad de Jaén</p>
 
-    <section class="bio">
-      <h2>Short Bio</h2>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1>Raciel Yera</h1>
+    <nav class="menu">
+      <a href="#bio">Bio</a>
+      <a href="#works">Works</a>
+	  <a href="#committees">Committees</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <section id="bio">
+      <h2>Bio</h2>
       <p>
-        I am Marie-Skłodowska Curie postdoctoral fellow in personalization and recommender systems, at University of Jaén, Spain.
+        I am Marie-Skłodowska Curie postdoctoral fellow in personalization and recommender systems
+        at the University of Jaén, Spain.
       </p>
     </section>
 
-    <section class="works">
+    <section id="works" class="works">
       <h2>Works</h2>
+
       <ul>
-        <li>Waterschoot, C., Yera Toledo, R., Tintarev, N., & Barile, F. (2025). With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations. In Proceedings of the 33rd ACM Conference on User Modeling, Adaptation and Personalization (pp. 253-262) <a href="https://dl.acm.org/doi/full/10.1145/3699682.3728345" target="_blank">(link)</a></li>
-        <li>Yera, R., Carballo-Cruz, E., & Maroto-Martos, J. C. (2025). Group recommender systems for tourism: Current state and future directions. Intelligent Decision Technologies, 19(4), 2212-2232 <a href="https://journals.sagepub.com/doi/10.1177/18724981251335098" target="_blank">(link)</a></li>
-        <li>Yera, R., Dutta, B., Martínez, F. J., & Martínez, L. (2025). Characterizing Provider Fairness in Content-Based E-Service Intelligent Recommendation. In International Conference on Intelligent and Fuzzy Systems (pp. 575-583). Cham: Springer Nature Switzerland <a href="https://link.springer.com/chapter/10.1007/978-3-031-98565-2_62" target="_blank">(link)</a></li>
+        <li>
+          Waterschoot, C., Yera Toledo, R., Tintarev, N., & Barile, F. (2025).
+          With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations.
+          <a href="https://dl.acm.org/doi/full/10.1145/3699682.3728345" target="_blank">link</a>
+        </li>
+
+        <li>
+          Yera, R., Carballo-Cruz, E., & Maroto-Martos, J. C. (2025).
+          Group recommender systems for tourism: Current state and future directions.
+          <a href="https://journals.sagepub.com/doi/10.1177/18724981251335098" target="_blank">link</a>
+        </li>
+
+        <li>
+          Yera, R., Dutta, B., Martínez, F. J., & Martínez, L. (2025).
+          Characterizing Provider Fairness in Content-Based E-Service Intelligent Recommendation.
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-98565-2_62" target="_blank">link</a>
+        </li>
+		
 		<li>Yera, R., & Martínez, L. (2024). LORE4GroupRS: Explaining Group Recommendations supported by a Local Rule-Based Approach. In International Conference on Intelligent Data Engineering and Automated Learning (pp. 300-312). Cham: Springer Nature Switzerland <a href="https://link.springer.com/chapter/10.1007/978-3-031-77738-7_25" target="_blank">(link)</a></li>
       
-	  </ul>
+      </ul>
     </section>
-    <section class="works">
+	<section id="committees">
       <h2>Committess</h2>
       <ul>
 		<li>Local Chair of IDEAL 2025</li>
@@ -122,9 +187,16 @@ main {
 	  </ul>
     </section>
 	
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <strong>tu-email@ejemplo.com</strong></p>
+    </section>
+
     <footer>
-      <p>© 2025 Raciel Yera Toledo</p>
+      © 2025 Raciel Yera Toledo
     </footer>
+
   </main>
+
 </body>
 </html>
