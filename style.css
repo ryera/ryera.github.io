@@ -79,13 +79,15 @@ footer {
 }
 
 
+
 .profile-pic {
-  width: 100%;           /* se adapta al ancho del aside */
-  height: auto;          /* mantiene proporción */
+  width: 100%;
+  max-width: 100%;     /* evita que Firefox use el tamaño natural */
+  height: auto;
   display: block;
   margin-bottom: 1.5rem;
-  border-radius: 8px;    /* opcional: bordes redondeados */
-  object-fit: cover;     /* se asegura de que se vea bien si recortas */
+  border-radius: 8px; 
+  object-fit: cover;
 }
 
 
