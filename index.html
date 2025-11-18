@@ -9,49 +9,37 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
     :root {
-      --bg: #ffffff;
-      --text: #111;
-      --accent: #007ACC;
       --sidebar-width: 220px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --accent: #007ACC;
+      --text: #111;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      margin: 0;
+      font-family: "Inter", sans-serif;
       display: flex;
-      line-height: 1.6;
     }
 
-    /* ---- SIDEBAR ---- */
+    /* Sidebar */
     .sidebar {
       width: var(--sidebar-width);
       height: 100vh;
       position: fixed;
-      left: 0;
-      top: 0;
+      background: #fff;
+      border-right: 1px solid #eee;
       padding: 2rem 1.5rem;
-      border-right: 1px solid #e5e5e5;
     }
 
     .sidebar h1 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-bottom: 1.5rem;
-      font-weight: 600;
     }
 
     .menu a {
       display: block;
-      text-decoration: none;
-      color: var(--text);
       margin-bottom: 0.8rem;
-      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
       transition: 0.2s;
     }
 
@@ -60,142 +48,29 @@
       padding-left: 4px;
     }
 
-    /* ---- MAIN CONTENT ---- */
+    /* Main content */
     .content {
       margin-left: var(--sidebar-width);
       padding: 2rem 3rem;
-      max-width: 900px;
-    }
-
-    h2 {
-      color: var(--accent);
-      margin-top: 2rem;
-      margin-bottom: 0.8rem;
-      font-size: 1.3rem;
-    }
-
-    .works ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .works li {
-      margin-bottom: 0.6rem;
-    }
-
-    .works a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .works a:hover {
-      opacity: 0.7;
-    }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #777;
-    }
-
-    /* ---- RESPONSIVE ---- */
-    @media (max-width: 900px) {
-      :root {
-        --sidebar-width: 160px;
-      }
-      .sidebar h1 {
-        font-size: 1.2rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #e5e5e5;
-      }
-      .content {
-        margin-left: 0;
-        padding-top: 1.5rem;
-      }
     }
 
   </style>
+
 </head>
 <body>
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h1>Raciel Yera</h1>
     <nav class="menu">
-      <a href="#bio">Bio</a>
-      <a href="#works">Works</a>
-	  <a href="#committees">Committees</a>
-      <a href="#contact">Contact</a>
+      <a href="bio.html">Bio</a>
+      <a href="works.html">Works</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </aside>
 
-  <!-- MAIN CONTENT -->
   <main class="content">
-
-    <section id="bio">
-      <h2>Bio</h2>
-      <p>
-        I am Marie-Skłodowska Curie postdoctoral fellow in personalization and recommender systems
-        at the University of Jaén, Spain.
-      </p>
-    </section>
-
-    <section id="works" class="works">
-      <h2>Works</h2>
-
-      <ul>
-        <li>
-          Waterschoot, C., Yera Toledo, R., Tintarev, N., & Barile, F. (2025).
-          With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations.
-          <a href="https://dl.acm.org/doi/full/10.1145/3699682.3728345" target="_blank">link</a>
-        </li>
-
-        <li>
-          Yera, R., Carballo-Cruz, E., & Maroto-Martos, J. C. (2025).
-          Group recommender systems for tourism: Current state and future directions.
-          <a href="https://journals.sagepub.com/doi/10.1177/18724981251335098" target="_blank">link</a>
-        </li>
-
-        <li>
-          Yera, R., Dutta, B., Martínez, F. J., & Martínez, L. (2025).
-          Characterizing Provider Fairness in Content-Based E-Service Intelligent Recommendation.
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-98565-2_62" target="_blank">link</a>
-        </li>
-		
-		<li>Yera, R., & Martínez, L. (2024). LORE4GroupRS: Explaining Group Recommendations supported by a Local Rule-Based Approach. In International Conference on Intelligent Data Engineering and Automated Learning (pp. 300-312). Cham: Springer Nature Switzerland <a href="https://link.springer.com/chapter/10.1007/978-3-031-77738-7_25" target="_blank">(link)</a></li>
-      
-      </ul>
-    </section>
-	<section id="committees">
-      <h2>Committess</h2>
-      <ul>
-		<li>Local Chair of IDEAL 2025</li>
-		<li>Reviewer of ACM Transactions on Information Systems</li>
-		<li>Reviewer of Information Sciences</li>
-		<li>Reviewer of User Modeling and User-Adapted Interaction</li>
-		<li>Reviewer of Knowledge and Information Systems</li>		
-	  </ul>
-    </section>
-	
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <strong>tu-email@ejemplo.com</strong></p>
-    </section>
-
-    <footer>
-      © 2025 Raciel Yera Toledo
-    </footer>
-
+    <h2>Welcome</h2>
+    <p>Please use the menu to navigate.</p>
   </main>
 
 </body>
