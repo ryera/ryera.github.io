@@ -79,6 +79,11 @@ footer {
 }
 
 
+.sidebar {
+  width: 220px;      /* o la que uses */
+  flex-shrink: 0;
+}
+
 
 .profile-pic {
   width: 100%;
